@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTT-KMP</title>
+    <link type="text/css" rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg" href="composeResources/ttt_kmp.composeapp.generated.resources/drawable/TTT-KMP.svg">
+    <script type="application/javascript" src="composeApp.js"></script>
+    <script>
+                onTimApiReady = function() {
+                    composeApp.then(
+                         function(value){ value.timApiReadyCallback()},
+                         function(error){})
+                };
+
+               onTimApiPublishLogRecord = function(logRecord) {
+                   composeApp.then(
+                        function(value){ value.myTimApiPublishLogRecord(logRecord)},
+                        function(error){})
+               };
+
+    </script>
+    <script type="application/javascript" src="timapi.js"></script>
+    <script type="application/javascript" src="helper.js"></script>
+</head>
+<body></body>
+</html>
