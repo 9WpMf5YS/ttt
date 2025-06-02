@@ -7,7 +7,7 @@
 
 class MyTerminalListener extends timapi.DefaultTerminalListener {
 
-    constructor(requestCompleted, terminalStatusChanged, screenshot) {
+    constructor(requestCompleted, terminalStatusChanged, screenshot, disconnected) {
 //        console.log("constructor MyTerminalListener");
 //        console.log("constructor super()");
         super();
@@ -16,8 +16,10 @@ class MyTerminalListener extends timapi.DefaultTerminalListener {
 //        console.log("constructor terminalStatusChanged = " + terminalStatusChanged);
         this.terminalStatusChangedCallback = terminalStatusChanged;
 
-        this.screenshotCallback = screenshot
+        this.screenshotCallback = screenshot;
 //        console.log("returning");
+
+        this.disconnectedCallback = disconnected;
     }
 
     requestCompleted(event, data) {
@@ -34,7 +36,14 @@ class MyTerminalListener extends timapi.DefaultTerminalListener {
     }
 
     screenshot(terminal, screenshotInformation) {
-        super.screenshot(terminal, screenshotInformation)
-        this.screenshotCallback(terminal, screenshotInformation)
+        super.screenshot(terminal, screenshotInformation);
+        this.screenshotCallback(terminal, screenshotInformation);
+    }
+
+    disconnected(terminal, exception) {
+        console.log("\n\nterminal disconnected called: terminal = " + terminal);
+        console.log("\n\nterminal disconnected called: exception = " + exception);
+        super.disconnected(terminal, exception);
+        this.disconnectedCallback(terminal, exception);
     }
 }
