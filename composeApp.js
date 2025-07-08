@@ -47,7 +47,7 @@ eval("class e{static create(e,t){return`${e}:${t}`}}class t{static create(t,n,r)
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "6116b8662518b75e0e49.wasm";
+module.exports = __webpack_require__.p + "dc1afd63f65815b2c154.wasm";
 
 /***/ }),
 
