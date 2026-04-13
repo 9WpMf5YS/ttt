@@ -70,7 +70,7 @@ eval("{__webpack_require__.a(__webpack_module__, async (__webpack_handle_async_d
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "e849c21ddb8a8dd051c5.wasm";
+module.exports = __webpack_require__.p + "d8fe535331a6af5e6d79.wasm";
 
 /***/ }),
 
