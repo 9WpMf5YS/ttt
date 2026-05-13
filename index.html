@@ -11,13 +11,15 @@
                 onTimApiReady = function() {
                     composeApp.then(
                          function(value){ value.timApiReadyCallback()},
-                         function(error){})
+                         function(error){}
+                    )
                 };
 
                onTimApiPublishLogRecord = function(logRecord) {
                    composeApp.then(
                         function(value){ value.myTimApiPublishLogRecord(logRecord)},
-                        function(error){})
+                        function(error){ console.log(error) }
+                   ).catch( error =>  console.log(error) );
                };
 
     </script>
